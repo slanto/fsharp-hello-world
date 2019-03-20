@@ -36,4 +36,32 @@ let PrintCompany (company : Company) =
         | None -> ""
     printfn "%s%s" company.Name taxNumberString
 
-//Discriminated Unions
+//Discriminated Unions -> we don't need type hierarchy just DUs
+
+type Shape =
+    | Square of float
+    | Rectangle of float * float
+    | Circle of float
+
+let s = Square 3.4
+let r = Rectangle (2.2, 1.9)
+let c = Circle 1.0
+
+let drawing = [| s; r; c|]
+
+// Pattern matching
+let Area (shape : Shape) =
+    match shape with
+    | Square x -> x * x
+    | Rectangle (h, w) -> h * w
+    | Circle r -> System.Math.PI * r * r
+
+let one = [|50|]
+let two = [|60;61|]
+let many = [|0..90|]
+
+let Describe arr =
+    match arr with
+    | [|x|] -> sprintf "One element: %i" x
+    | [|x; y|] -> sprintf "Two elements: %i %i" x y
+    | _ -> sprintf "A longer array"
