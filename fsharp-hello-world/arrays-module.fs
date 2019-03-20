@@ -52,3 +52,10 @@ let PrintLongWords2 (words: string[]) =
         |> Array.filter (fun w -> w.Length > 4)
         |> Array.sort
         |> Array.iter (fun w -> printfn "%s" w)
+
+let PrintSquares min max =
+        let square n =
+                n * n
+        [|min..max|]
+        |> Array.map (fun i-> square i)
+        |> Array.iter (fun s -> printfn "%i" s)
