@@ -59,3 +59,12 @@ let PrintSquares min max =
         [|min..max|]
         |> Array.map (fun i-> square i)
         |> Array.iter (fun s -> printfn "%i" s)
+
+let arr2 = [|1..10|]
+
+arr2.[2] <- 100 // array is mutable. I can its change in index 2 
+
+let PrintNumbersLessThenFive min max =
+        [min..max] // <- list is immutable
+        |> List.filter (fun n -> n < 5)
+        |> List.iter (fun i -> printfn "%i" i)
