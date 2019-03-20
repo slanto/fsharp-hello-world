@@ -68,3 +68,22 @@ let PrintNumbersLessThenFive min max =
         [min..max] // <- list is immutable
         |> List.filter (fun n -> n < 5)
         |> List.iter (fun i -> printfn "%i" i)
+
+
+// Sequences === IEnumerable in c#
+let smallNumbers = {1..99}
+
+let smallNumbers2 = Seq.init 100 (fun i -> i)
+
+let smallNumbers3 = 
+        seq {
+                for i in 0..99 do
+                        yield i
+        }
+
+open System.IO
+let bigFiles =
+        Directory.EnumerateFiles(".")
+        |> Seq.map (fun name -> FileInfo name)
+        |> Seq.filter (fun fi -> fi.Length > 10L)
+        |> Seq.map (fun fi -> fi.Name)
