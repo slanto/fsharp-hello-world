@@ -8,6 +8,9 @@
 
   <ItemGroup>
     <Compile Include="Program.fs" />
+    <Compile Include="arrays-module.fs" />
+    <Compile Include="module4.fs" />
+    <Compile Include="module6.fs" />
   </ItemGroup>
 
 </Project>
