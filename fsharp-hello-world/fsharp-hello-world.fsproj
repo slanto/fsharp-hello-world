@@ -11,6 +11,7 @@
     <Compile Include="arrays-module.fs" />
     <Compile Include="module4.fs" />
     <Compile Include="module6.fs" />
+    <Compile Include="module7.fs" />
   </ItemGroup>
 
 </Project>
