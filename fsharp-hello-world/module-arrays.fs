@@ -41,3 +41,22 @@ let VowelPositions1 (str: string) =
     str.ToCharArray()
     |> Array.iteri (fun i c -> if vowels.Contains(c.ToString()) then
                                     printfn "Vowel at possition %i %c" i c)
+
+open System
+
+let LastDays year =
+    [|
+        for month in 1..12 do
+            let firstDay = DateTime(year, month, 1)
+            let dayCount = float(DateTime.DaysInMonth(year, month))
+            let lastDay = firstDay.AddDays(dayCount-1.)
+            yield lastDay
+    |]
+
+let IsWeekend (day: DateTime) = 
+    day.DayOfWeek = DayOfWeek.Saturday 
+    || day.DayOfWeek = DayOfWeek.Sunday
+
+let WarningDays year =
+    LastDays year
+    |> Array.filter (fun d -> IsWeekend d)
