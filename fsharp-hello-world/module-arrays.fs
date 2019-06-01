@@ -35,3 +35,9 @@ let VowelPositions (str: string) =
                                     sprintf "Vowel at possition %i %c" i c
                               else
                                     sprintf "Some other character")
+
+let VowelPositions1 (str: string) =
+    let vowels = "aeiouAEIOU"
+    str.ToCharArray()
+    |> Array.iteri (fun i c -> if vowels.Contains(c.ToString()) then
+                                    printfn "Vowel at possition %i %c" i c)
