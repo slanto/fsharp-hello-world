@@ -26,4 +26,12 @@ let lastDay year =
         let firstDay = DateTime(year, month, 1)
         let lastDay = firstDay.AddDays(float(DateTime.DaysInMonth(year, month)-1))
         lastDay
-    )
+)
+
+let VowelPositions (str: string) =
+    let vowels = "aeiouAEIOU"
+    str.ToCharArray()
+    |> Array.mapi (fun i c -> if vowels.Contains(c.ToString()) then
+                                    sprintf "Vowel at possition %i %c" i c
+                              else
+                                    sprintf "Some other character")
