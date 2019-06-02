@@ -60,3 +60,5 @@ let IsWeekend (day: DateTime) =
 let WarningDays year =
     LastDays year
     |> Array.filter (fun d -> IsWeekend d)
+
+    
