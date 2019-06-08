@@ -17,8 +17,10 @@
     <Compile Include="module4.fs" />
     <Compile Include="module6.fs" />
     <Compile Include="module7.fs" />
-    <Compile Include="use.fs" />
+    <Compile Include="pattern-matching.fs" />
+    <Compile Include="printing.fs" />
     <Compile Include="Program.fs" />
+    <Compile Include="use.fs" />
   </ItemGroup>
 
 </Project>
