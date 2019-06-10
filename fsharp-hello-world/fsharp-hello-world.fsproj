@@ -20,6 +20,7 @@
     <Compile Include="module7.fs" />
     <Compile Include="pattern-matching.fs" />
     <Compile Include="printing.fs" />
+    <Compile Include="tuple-module.fs" />
     <Compile Include="Program.fs" />
     <Compile Include="use.fs" />
   </ItemGroup>
