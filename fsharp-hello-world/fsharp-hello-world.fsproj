@@ -12,6 +12,7 @@
     <Compile Include="array-reduce.fs" />
     <Compile Include="array-zip.fs" />
     <Compile Include="dotnet-exceptions.fs" />
+    <Compile Include="list-module.fs" />
     <Compile Include="module-arrays.fs" />
     <Compile Include="arrays-module.fs" />
     <Compile Include="module4.fs" />
